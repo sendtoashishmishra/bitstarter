@@ -1,9 +1,14 @@
 var express = require('express');
 var app = express();
+var fs= require('fs');
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World!<hr/>This is Ashish Mishra and this website is one of the assignments in Startup Engineering');
+	
+	var  myhtml = fs.readFileSync('index.html','utf8');
+        
+
+        response.send(myhtml);
 });
 
 var port = process.env.PORT || 5000;
