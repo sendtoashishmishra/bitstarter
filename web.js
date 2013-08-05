@@ -1,7 +1,9 @@
-var express = require('express')
-  , fs = require('fs');
+var express = require('express');
+var app = express();
+express.logger();
 
-var app = express.createServer(express.logger());
+var fs = require('fs');
+
 app.use(express.static(__dirname + '/assets'));
 
 app.get('/', function (req, res) {
