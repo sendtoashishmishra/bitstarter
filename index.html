@@ -1,80 +1,284 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <title>My First Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+          rel="stylesheet" type="text/css">
+    <style type="text/css">
 
-    <title>Tutor Finder: Building Knowledge Networks !</title>
+      /* Large desktop */
+      @media (min-width: 980px) { 
+        body {
+         padding-top: 60px;
+        }
+       .linediv-l {
+         border-right: 1px white solid;
+        }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+      /* Landscape phones and down */
+      @media (max-width: 480px) { 
+       .copy {
+         padding: 2.5% 10%;
+       }
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
 
-    <!-- Custom styles for this template -->
-    <link href="justified-nav.css" rel="stylesheet">
+      /* All form factors */
+
+      /* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+      p.lead {
+        padding-top: 1.5%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
+      }
+    </style>
   </head>
-
   <body>
 
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Tutor Finder</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
-
-      <div class="masthead">
-        <h3 class="text-muted">Tutor Finder : Building Knowledge Networks.</h3>
-        <ul class="nav navbar-nav nav-justified">
-          <li class="active"><a href="#">Home</a></li>
-          <li></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Tutor Finder: Development Version</h1>
+        </div>
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">Connecting the Learners and the Learned.</p>
+        </div>
       </div>
-
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Learn at Will !!!</h1>
-        <p class="lead">Are you stuck with a subject or chapter or concept ? </p>
-        <p class="lead">Want to find someone closeby to clear your doubts?</p>
-        <p class="lead">Well it's a connected world !!!</p>
-        <p class="lead">&nbsp;</p>
-        <p><a class="btn btn-large btn-success" href="#">Get started today</a></p>
-      </div>
-
-
-      <div class="body-content">
-
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-lg-4">
-            <h2>Why so confused ?</h2>
-            <p>How many times have you found yourself stuck with some concept (In subjects like Economics, Maths, Physics, Chemistry, Accounting etc..), and despite the presence of internet and teachers, have wished for somebody who understands the stuff well and can explain it to you ? Quite often. Isn't it ?</p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <h2>Who is the tutor here ?</h2>
-            <p>Here, the tutor refers to that knowledgeable person, who can save the day for you. So, he\she is not the tutor in the regular sense of the word. The tutor could be anybody:-</p>
-            <p>1) Your Senior at College\School.</p>
-            <p>2) A working professional. </p>
-            <p>3) An exam aspirant...etc etc etc.          </p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-         </div>
-          <div class="col-lg-4">
-            <h2>How does Tutor Finder Help ?</h2>
-            <p>So, the idea is simple. You want to learn somehting. Somebody in your city\town\village understands it crystal-clear and if given a chance, is willing to explain it to you along with your friends. In return, you are more than willing to pay him\her for his\her services. Tutor Finder facilitates that network of tutors.</p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-          </div>
+      <div class="row-fluid pitch">
+        <div class="span5 offset1 video">
+          <p><img class="img-polaroid" alt="Placeholder" src="images/the_tutor.png"></p>
         </div>
 
-      </div><!-- /.body-content -->
-
-      <!-- Site footer -->
-      <div class="footer">
-        <p>&copy; Collective Knowledge Inc 2013</p>
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+        <div class="span5 actions">
+          <div class="row-fluid">
+          <div class="span8 offset2">
+            <div class="row-fluid statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
+                <div class="linediv-l">
+                <h3>1000</h3> <p>backers</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$6000</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                <h3>10</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span10 offset1">
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 40%;"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Preorder with Bitcoin</button>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <a href="https://twitter.com/TutorFinder_" target="_blank"><button class="btn btn-twitter" ><i class="icon-twitter"></i> | Twitter</button></a>
+            <a href="https://www.facebook.com/TFIPune" target="_blank"><button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button></a>
+          </div>
+          </div>
+        </div>
+        </div>
       </div>
 
-    </div> <!-- /container -->
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="images/learning_guitar.png">
+        </div>
+        <div class="span5 copy">
+          <p>
+<h3>How does this thing work ?</h3>
+Ans-> There will be a form to be filled by the students. This form will mention the kind of concept they want to learn,number of people ready to take the class, preferable venue, time range etc. Once submitted, this will be displayed on the website's open section for different people to view. Any person, who thinks that he\she can teach the concept, would have to do a quick registration and express his approval to the students.
+          </p>
+        </div>
+      </div>
 
+      <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+<p>
+<h3>Why will this work as a business idea?</h3>
+Ans-> Because there is a huge market for this, which is  - <b>Connecting the Learners and the Learned !!!</b> The prime aim is to bring people together and build a credible network where "learning anything " is just a form filling and a click away !! Once the network is in place, cash flow is just a bi-product, as it should be.
+</p>
+        </div>
+        <div class="span5 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="images/teach_cooking.png">
+        </div>
+      </div>
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+                    Click to Expand...
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    Q1-> How does this thing work ?
+                  </div>
+                  <div class="accordion-inner">
+                    Ans-> There will be a form to be filled by the students. This form will mention the kind of concept they want to learn,number of people ready to take the class, preferable venue, time range etc. Once submitted, this will be displayed on the website's open section for different people to view. Any person, who thinks that he\she can teach the concept, would have to do a quick registration and express his approval to the students.
+                  </div>
+                  <div class="accordion-inner">
+                    Q1-> How is this network built ?
+                  </div>
+                  <div class="accordion-inner">
+                    Ans-> There will be a form to be filled by the students. This form will mention the kind of concept they want to learn,number of people ready to take the class, preferable venue, time range etc. Once submitted, this will be displayed on the website's open section for different people to view. Any person, who thinks that he\she can teach the concept, would have to do a quick registration and express his approval to the students.
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="accordion-group">
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
